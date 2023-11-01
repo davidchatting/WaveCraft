@@ -5,7 +5,7 @@ WaveCraft::WaveCraft(float frequency, float amplitude, float phase) {
   _amplitude = amplitude;
   _low = -amplitude / 2;
   _high = amplitude / 2;
-  _phase = radians(phase);
+  _phase = phase;
   _startTime = millis();
 }
 
@@ -40,14 +40,14 @@ float WaveCraft::getHigh() {
 float WaveCraft::getValue() {
   unsigned long currentTime = millis();
   float time = (currentTime - _startTime) / 1000.0;
-  float value = _amplitude * isin(360 * _frequency * time + _phase);
+  float value = _amplitude * isin(180 * _frequency * time + _phase);
   return mapFloat(value, -_amplitude, _amplitude, _low, _high);
 }
 
 int WaveCraft::getIntValue() {
   unsigned long currentTime = millis();
   float time = (currentTime - _startTime) / 1000.0;
-  float value = _amplitude * isin(360 * _frequency * time + _phase);
+  float value = _amplitude * isin(180 * _frequency * time + _phase);
   return (int)mapFloat(value, -_amplitude, _amplitude, _low, _high);
 }
 
