@@ -20,7 +20,7 @@ public:
   int getIntValue();
 
 private:
-  float _frequency;
+  float _frequencyHz;
   float _amplitude;
   float _phase;
   float _low;
