@@ -1,7 +1,7 @@
 #ifndef WaveCraft_h
 #define WaveCraft_h
 #include <Arduino.h>
-#include <math.h>
+#include <FastTrig.h>
 
 class WaveCraft {
 public:
