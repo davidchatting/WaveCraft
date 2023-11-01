@@ -50,4 +50,3 @@ int WaveCraft::getIntValue() {
   float value = _amplitude * isin(degrees(2 * PI * _frequencyHz * timeSeconds + _phase));
   return (int)mapFloat(value, -_amplitude, _amplitude, _low, _high);
 }
-
